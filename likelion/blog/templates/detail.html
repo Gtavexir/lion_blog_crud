@@ -5,6 +5,9 @@
 <br>
 <hr>
 <p>{{blog.body}}</p>
+{% if blog.image %}
+<p><img src="{{blog.image.url}}" alt="" width="200" height="200"></p>
+{% endif %}
 <a href="{%url 'edit' blog.id%}">수정하기</a>
 <a href="{%url 'delete' blog.id%}">삭제하기</a>
 <a href="{%url 'home'%}">홈으로</a>
